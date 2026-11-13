@@ -1,5 +1,5 @@
 CIS Network Hardening — ITLA
-Video de demostración (YouTube, máximo 10 min): [youube](https://youtu.be/UmrPVJwqh94)
+Video de demostración (YouTube, máximo 10 min): [youtube](https://youtu.be/UmrPVJwqh94)
 
 [Evidencias_Finales_CIS_Network_Hardening.pdf](https://github.com/user-attachments/files/34815411/Evidencias_Finales_CIS_Network_Hardening.pdf)
 
