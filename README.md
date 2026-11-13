@@ -1,5 +1,8 @@
 CIS Network Hardening — ITLA
-Video de demostración (YouTube, máximo 10 min): `PEGAR_URL_YOUTUBE_AQUI`
+Video de demostración (YouTube, máximo 10 min): [youube](https://youtu.be/UmrPVJwqh94)
+
+[Evidencias_Finales_CIS_Network_Hardening.pdf](https://github.com/user-attachments/files/34815411/Evidencias_Finales_CIS_Network_Hardening.pdf)
+
 Estudiante: Jennifer Lopez Paulino  
 Matrícula: 2024-0860  
 Dominio: `cis-lab.local`  
