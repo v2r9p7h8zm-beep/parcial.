@@ -1,1 +1,7 @@
 
+Hostname: ZBX1
+IPv4 por DHCP: 10.8.60.102/24
+Interfaz: enp0s3
+MAC original: 08:00:27:bf:3c:38
+Zabbix Server 7.0.3
+snmpd activo localmente; snmpwalk local con comunidad RO LabMonitor860 respondió.
