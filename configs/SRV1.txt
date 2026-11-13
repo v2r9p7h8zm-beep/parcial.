@@ -1,1 +1,7 @@
+Hostname: SRV1
+IPv4 por DHCP: 10.8.60.100/24
+Gateway: 10.8.60.1
+DNS: 10.8.60.10
+Dominio: cis-lab.local
+SSH client usado para probar acceso a R1.
 
