@@ -1,1 +1,6 @@
 
+Hostname: PC1
+IPv4 por DHCP: 10.8.60.101/24
+Gateway: 10.8.60.1
+DNS: 10.8.60.10
+Dominio: cis-lab.local
