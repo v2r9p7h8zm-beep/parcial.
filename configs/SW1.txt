@@ -1,1 +1,173 @@
+sw1:/# ovs-ofctl show br0
+OFPT_FEATURES_REPLY (xid=0x2): dpid:000046bbfb40be4f
+n_tables:254, n_buffers:0
+capabilities: FLOW_STATS TABLE_STATS PORT_STATS QUEUE_STATS ARP_MATCH_IP
+actions: output enqueue set_vlan_vid set_vlan_pcp strip_vlan mod_dl_src mod_dl_dst mod_nw_src mod_nw_dst mod_nw_tos mod_tp_src mod_tp_dst
+ 1(eth0): addr:02:42:0d:2d:4e:00
+     config:     0
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 2(eth1): addr:02:42:0d:2d:4e:01
+     config:     0
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 3(eth2): addr:02:42:0d:2d:4e:02
+     config:     0
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 4(eth3): addr:02:42:0d:2d:4e:03
+     config:     0
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 5(eth4): addr:02:42:0d:2d:4e:04
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 6(eth5): addr:02:42:0d:2d:4e:05
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 7(eth6): addr:02:42:0d:2d:4e:06
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 8(eth7): addr:02:42:0d:2d:4e:07
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 9(eth8): addr:02:42:0d:2d:4e:08
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 10(eth9): addr:02:42:0d:2d:4e:09
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 11(eth10): addr:02:42:0d:2d:4e:0a
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 12(eth11): addr:02:42:0d:2d:4e:0b
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 13(eth12): addr:02:42:0d:2d:4e:0c
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 14(eth13): addr:02:42:0d:2d:4e:0d
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 15(eth14): addr:02:42:0d:2d:4e:0e
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ 16(eth15): addr:02:42:0d:2d:4e:0f
+     config:     PORT_DOWN
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ LOCAL(br0): addr:46:bb:fb:40:be:4f
+     config:     0
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+OFPT_GET_CONFIG_REPLY (xid=0x4): frags=normal miss_send_len=0
+sw1:/# ovs-ofctl dump-flows br0
+ cookie=0x0, duration=3432.327s, table=0, n_packets=0, n_bytes=0, priority=100,in_port=eth1,dl_src=00:50:79:66:68:00 actions=NORMAL
+ cookie=0x0, duration=3432.309s, table=0, n_packets=0, n_bytes=0, priority=100,in_port=eth1,dl_src=02:00:00:00:01:01 actions=NORMAL
+ cookie=0x0, duration=3432.275s, table=0, n_packets=303, n_bytes=27720, priority=100,in_port=eth2,dl_src=08:00:27:c7:5e:c5 actions=NORMAL
+ cookie=0x0, duration=3432.256s, table=0, n_packets=0, n_bytes=0, priority=100,in_port=eth2,dl_src=02:00:00:00:01:02 actions=NORMAL
+ cookie=0x0, duration=3432.223s, table=0, n_packets=1600, n_bytes=130724, priority=100,in_port=eth3,dl_src=08:00:27:bf:3c:38 actions=NORMAL
+ cookie=0x0, duration=3432.205s, table=0, n_packets=19, n_bytes=3632, priority=100,in_port=eth3,dl_src=02:00:00:00:01:03 actions=NORMAL
+ cookie=0x0, duration=3432.293s, table=0, n_packets=0, n_bytes=0, priority=90,in_port=eth1 actions=drop
+ cookie=0x0, duration=3432.240s, table=0, n_packets=0, n_bytes=0, priority=90,in_port=eth2 actions=drop
+ cookie=0x0, duration=8261.457s, table=0, n_packets=6015, n_bytes=482526, priority=0 actions=NORMAL
+sw1:/# ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ovs-netdev: <BROADCAST,MULTICAST100> mtu 1500 qdisc noop state DOWN qlen 1000
+    link/ether 32:0a:4f:f0:c6:6a brd ff:ff:ff:ff:ff:ff
+3: br3: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether fa:64:a0:d9:1f:40 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::f864:a0ff:fed9:1f40/64 scope link
+       valid_lft forever preferred_lft forever
+4: br2: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether be:94:40:be:0d:49 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::bc94:40ff:febe:d49/64 scope link
+       valid_lft forever preferred_lft forever
+5: br0: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether 46:bb:fb:40:be:4f brd ff:ff:ff:ff:ff:ff
+    inet 10.8.60.2/24 scope global br0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::44bb:fbff:fe40:be4f/64 scope link
+       valid_lft forever preferred_lft forever
+6: br1: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether ea:a3:9d:e7:83:47 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::e8a3:9dff:fee7:8347/64 scope link
+       valid_lft forever preferred_lft forever
+22: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:00 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::42:dff:fe2d:4e00/64 scope link
+       valid_lft forever preferred_lft forever
+23: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:01 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::42:dff:fe2d:4e01/64 scope link
+       valid_lft forever preferred_lft forever
+24: eth2: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:02 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::42:dff:fe2d:4e02/64 scope link
+       valid_lft forever preferred_lft forever
+25: eth3: <BROADCAST,MULTICAST,UP,LOWER_UP100> mtu 1500 qdisc fq_codel state UNKNOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:03 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::42:dff:fe2d:4e03/64 scope link
+       valid_lft forever preferred_lft forever
+26: eth4: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:04 brd ff:ff:ff:ff:ff:ff
+27: eth5: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:05 brd ff:ff:ff:ff:ff:ff
+28: eth6: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:06 brd ff:ff:ff:ff:ff:ff
+29: eth7: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:07 brd ff:ff:ff:ff:ff:ff
+30: eth8: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:08 brd ff:ff:ff:ff:ff:ff
+31: eth9: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:09 brd ff:ff:ff:ff:ff:ff
+32: eth10: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:0a brd ff:ff:ff:ff:ff:ff
+33: eth11: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:0b brd ff:ff:ff:ff:ff:ff
+34: eth12: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:0c brd ff:ff:ff:ff:ff:ff
+35: eth13: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:0d brd ff:ff:ff:ff:ff:ff
+36: eth14: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:0e brd ff:ff:ff:ff:ff:ff
+37: eth15: <BROADCAST,MULTICAST100> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 02:42:0d:2d:4e:0f brd ff:ff:ff:ff:ff:ff
+sw1:/# ip route
+default via 10.8.60.1 dev br0
+10.8.60.0/24 dev br0 scope link  src 10.8.60.2
+sw1:/#
 
